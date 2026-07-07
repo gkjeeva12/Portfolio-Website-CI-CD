@@ -1,49 +1,149 @@
-# Dockerized Portfolio Website Deployment on AWS EC2
+# CI/CD Automation for Dockerized Portfolio Website using GitHub Actions
 
-Public URL: http://54.80.233.25
+## 📌 Project Overview
 
-## Technologies Used
+This project demonstrates a complete CI/CD pipeline for a Dockerized Portfolio Website using **GitHub Actions** and **Docker Hub**.
 
-* Docker
-* Nginx
-* AWS EC2 (Ubuntu)
-* GitHub
+Whenever code is pushed to the GitHub repository, GitHub Actions automatically:
 
-## Steps Performed
+- ✅ Builds the Docker image
+- ✅ Authenticates with Docker Hub
+- ✅ Pushes the latest Docker image to Docker Hub
 
-1. Created a Dockerfile.
-2. Built the Docker image.
-3. Ran the Docker container locally.
-4. Created an AWS EC2 Ubuntu instance.
-5. Installed Docker on EC2.
-6. Cloned the GitHub repository.
-7. Built and ran the Docker container on EC2. update readme
-8. Accessed the website using the Public IP address.
+This eliminates manual deployment steps and provides an automated build pipeline.
 
-## Commands Used
+---
 
+## 🚀 Technologies Used
+
+- Git
+- GitHub
+- GitHub Actions
+- Docker
+- Docker Hub
+- HTML
+- CSS
+- Nginx
+
+---
+
+## 📂 Project Structure
+
+```
+Portfolio-Website-CI-CD
+│
+├── .github
+│   └── workflows
+│       └── docker-ci.yml
+│
+├── Screenshots
+│   ├── workflow-success.png
+│   ├── dockerhub-repository.png
+│   └── portfolio-website-9090.png
+│
+├── Dockerfile
+├── index.html
+├── README.md
+```
+
+---
+
+## 🔄 CI/CD Workflow
+
+```
+Developer
+     │
+     ▼
+Push Code to GitHub
+     │
+     ▼
+GitHub Actions
+     │
+     ▼
+Build Docker Image
+     │
+     ▼
+Login to Docker Hub
+     │
+     ▼
+Push Docker Image
+     │
+     ▼
+Docker Hub Repository
+```
+
+---
+
+## ⚙️ GitHub Actions Workflow
+
+The workflow automatically executes whenever code is pushed to the **main** branch.
+
+Workflow Steps:
+
+- Checkout Repository
+- Login to Docker Hub
+- Build Docker Image
+- Push Docker Image
+
+---
+
+## 🐳 Docker Image
+
+**Docker Hub Username:** `Jeeva0312`
+
+**Image Name:**
+
+```
+Jeeva0312/portfolio-website
+```
+
+---
+
+## ▶️ Run the Project Locally
+
+### Build Docker Image
+
+```bash
 docker build -t portfolio-website .
+```
 
+### Run Docker Container
+
+```bash
 docker run -d -p 9090:80 portfolio-website
+```
 
-sudo docker build -t portfolio-website .
+Open:
 
-sudo docker run -d -p 80:80 portfolio-website
+```
+http://localhost:9090
+```
 
+---
 
-## Screenshots
+# 📸 Screenshots
 
-### Docker Images
-![Docker Images](Screenshots/docker-images.png)
+## GitHub Actions Workflow
 
-### Running Container
-![Docker PS](Screenshots/docker-ps.png)
+![GitHub Actions Workflow](screenshots/workflow.png)
 
-### Website Running Locally
-![Local Website](Screenshots/localhost-9090.png)
+---
 
-### EC2 Instance Running
-![EC2](Screenshots/ec2-running.png)
+## Docker Hub Repository
 
-### Website Running on AWS
-![Live Website](Screenshots/live-website-public.png)
+![Docker Hub Repository](screenshots/docker_hub.png)
+
+---
+
+## Portfolio Website
+
+![Portfolio Website](screenshots/9090.png)
+
+---
+
+## 👨‍💻 Author
+
+**Jeeva**
+
+- GitHub: https://github.com/gkjeeva12
+- Docker Hub: https://hub.docker.com/u/Jeeva0312
