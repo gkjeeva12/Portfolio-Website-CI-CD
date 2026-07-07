@@ -17,7 +17,7 @@ Public URL: http://54.80.233.25
 4. Created an AWS EC2 Ubuntu instance.
 5. Installed Docker on EC2.
 6. Cloned the GitHub repository.
-7. Built and ran the Docker container on EC2.
+7. Built and ran the Docker container on EC2. update readme
 8. Accessed the website using the Public IP address.
 
 ## Commands Used
